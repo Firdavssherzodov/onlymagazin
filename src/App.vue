@@ -1,8 +1,9 @@
  <template>
   <div>
-    <nav1/>
+    <!-- <nav1/>
     <Search/>
-    <carusel/>
+    <carusel/> -->
+    <router-view></router-view>
     <sotuv/>
   </div>
  </template>
@@ -11,7 +12,7 @@
  import nav1 from "./components/Header.vue"
  import Search from "./components/Search.vue"
  import carusel from "./components/carusel.vue"
- import sotuv from "./components/sotuv.vue"
+//  import sotuv from "./components/sotuv.vue"
  </script>
  
  <style scoped>
