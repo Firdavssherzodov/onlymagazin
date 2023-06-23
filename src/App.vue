@@ -1,8 +1,8 @@
  <template>
   <div>
-    <!-- <nav1/>
+    <nav1/>
     <Search/>
-    <carusel/> -->
+    <carusel/>
     <router-view></router-view>
     <sotuv/>
   </div>

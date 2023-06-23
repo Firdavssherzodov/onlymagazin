@@ -25,49 +25,37 @@
                 <!-- Left links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Shahar:</a>
+                        <a class="nav-link " href="#">Shahar:</a>
                     </li>
                     <li class="nav-item">
                         <!-- <a class="nav-link sa" href="#">  -->
                             
-                            <a
-              class="nav-link dropdown-toggle"
+                             
+            <a class=" modal-dialog modal-dialog-centered modal-dialog-scrollable  nav-link dropdown-toggle"
               href="#"
               id="navbarDropdown"
               role="button"
               data-mdb-toggle="dropdown"
-              aria-expanded="false"
-            >
-            Samarqand
-            </a>
-            <!-- Dropdown menu -->
-            <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Tepa Sug'onchi</a></li>
-              <li><a class="dropdown-item" href="#">Katta Sug'onchi </a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Qaraxtoy mahallasi</a></li>
-              <li><a class="dropdown-item" href="#">O'radin mahallasi</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-              
-            </ul>
+              aria-expanded="false">  Samarqand</a>
+        
 
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Topshirish punktlari</a>
                     </li>
                 </ul>
-                <!-- Left links -->
+ 
             </div>
-            <!-- Collapsible wrapper -->
+   
 
-            <!-- Right elements -->
+    
             <div class="d-flex align-items-center">
-                <!-- Icon -->
+           
                 <a class="link-secondary me-3" href="#">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
 
-                <!-- Notifications -->
+           
                 <div class="dropdown">
                     <a class="link-secondary me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
                         role="button" data-mdb-toggle="dropdown" aria-expanded="false">
@@ -86,7 +74,7 @@
                         </li>
                     </ul>
                 </div>
-                <!-- Avatar -->
+             
                 <div class="dropdown">
                     <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar"
                         role="button" data-mdb-toggle="dropdown" aria-expanded="false">
@@ -106,11 +94,11 @@
                     </ul>
                 </div>
             </div>
-            <!-- Right elements -->
+          
         </div>
-        <!-- Container wrapper -->
+       
     </nav>
-    <!-- Navbar -->
+  
       
 </div>
 </template>
@@ -128,7 +116,8 @@
 i{
     color: rgb(42, 42, 42);
 }
-.dropdown-toggle::before{
+.dropdown-toggle:hover{
     border: black;
 }
+ 
 </style>

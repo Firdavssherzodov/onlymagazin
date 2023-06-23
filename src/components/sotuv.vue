@@ -7,18 +7,18 @@
 
             <i class="far fa-heart"></i>
             <div class="ddiv2">
-                <img :src="srt1.image" alt="">
+                <img class="card-img-top" :src="srt1.image" alt="">
             </div>
-            <p class="p1">{{ srt1.title }}</p>
-            <p class="p2 "> <i class="i1 fas fa-star"></i> 4.5 (1255 marta)</p>
-            <!-- <span> <i class=" fas fa-cart-plus"></i> </span> -->
-            <p class="p3">{{ srt1.price }}</p>
-            <h6 class="p4"> {{ srt1.price }}</h6>
+            <p class="p1 card-text">{{ srt1.title }}</p>
+            <p class="p2  card-title"> <i class="i1 fas fa-star"></i> 4.5 (1255 marta)</p>
            
+            <p class="p3 card-text">{{ srt1.price }}</p>
+            <h6 class="p4 card-text"> {{ srt1.price }}</h6>
+            <button type="button" class="btn btn-danger w-20 d-b ">Sotib olish</button>
         </div>
 
     </div>
-    
+
 </template>
 
 <script setup>
@@ -65,11 +65,17 @@ axios.get('https://fakestoreapi.com/products')
     border-radius: 5px;
     position: relative;
     top: 10px;
-    transition: 0.5s;
+     
+}
+.div1:hover{
+    transform: scale(1.01);
+    transition: 0.8s;
+    color: black;
 }
 
 .div1 img:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
+    transition: 0.8s;
     
 }
 
@@ -83,7 +89,7 @@ axios.get('https://fakestoreapi.com/products')
 .p2 {
     font-size: 12px;
     padding: 10px;
-    color: grey;
+    color: rgb(143, 143, 143);
     margin-top: -30px;
 
 }
@@ -112,8 +118,9 @@ axios.get('https://fakestoreapi.com/products')
     left: 23%;
     z-index: 2;
     margin-top: 20px;
-    font-size: 20px;
-    color: rgb(103, 103, 103);
+    font-size: 25px;
+    color: red !important;
+     
 }
 .fa-cart-plus {
     color: rgb(25, 25, 25);
@@ -126,4 +133,9 @@ axios.get('https://fakestoreapi.com/products')
 }
 .ddiv2 {
     text-align: center;
-}</style>
+}
+.btn-danger{
+    display: block;
+ margin: auto;
+}
+</style>

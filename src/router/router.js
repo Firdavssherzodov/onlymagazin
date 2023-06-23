@@ -1,12 +1,12 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter,createWebHistory } from 'vue-router'
 
-import sotuv from '../components/sotuv.vue'
+import sotuvchi from '../components/sotuv.vue'
 
 const route = [
     {
         path:'/',
         name:'sotuv',
-        component:sotuv,
+        component:sotuvchi,
     }
 ]
 
