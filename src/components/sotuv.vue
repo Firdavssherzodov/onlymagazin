@@ -65,7 +65,6 @@ axios.get('https://fakestoreapi.com/products')
     border-radius: 5px;
     position: relative;
     top: 10px;
-    /* left: 20px; */
     transition: 0.5s;
 }
 
@@ -116,15 +115,6 @@ axios.get('https://fakestoreapi.com/products')
     font-size: 20px;
     color: rgb(103, 103, 103);
 }
-
-.fa-heart:hover {
-    color: black;
-}
-
-.fa-heart::after {
-    
-}
-
 .fa-cart-plus {
     color: rgb(25, 25, 25);
     position: absolute;
@@ -134,12 +124,6 @@ axios.get('https://fakestoreapi.com/products')
     border-radius: 50%;
 
 }
-
-.fa-cart-plus:hover {
-    transform: scale(1.02);
-    color: black;
-}
-
 .ddiv2 {
     text-align: center;
 }</style>
