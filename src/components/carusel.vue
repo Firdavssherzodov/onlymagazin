@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div id="carouselExampleIndicators" class="rounded-5 border-3 carousel slide" data-mdb-ride="carousel" style="  width: 75%;
-    height: 5% !important; margin: auto;">
+        <div id="carouselExampleIndicators" class="rounded-5 border-3 carousel slide" data-mdb-ride="carousel" style="  width: 85%;
+    height: 2% !important; margin: auto;">
             <div class="carousel-indicators">
                 <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>

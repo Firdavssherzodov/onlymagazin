@@ -5,7 +5,7 @@
 
         <div class="div1 col-3 mt-4 shadow-5" v-for="srt1 in srt">
 
-            <i class="far fa-heart"></i>
+            
             <div class="ddiv2">
                 <img class="card-img-top" :src="srt1.image" alt="">
             </div>
@@ -35,6 +35,8 @@ axios.get('https://fakestoreapi.com/products')
 
     })
 
+
+ 
 </script>
 
 <style scoped>

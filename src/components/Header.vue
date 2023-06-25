@@ -31,7 +31,7 @@
                         <!-- <a class="nav-link sa" href="#">  -->
                             
                              
-            <a class=" modal-dialog modal-dialog-centered modal-dialog-scrollable  nav-link dropdown-toggle"
+            <a class="    nav-link dropdown-toggle"
               href="#"
               id="navbarDropdown"
               role="button"
