@@ -37,15 +37,18 @@ axios.get('https://fakestoreapi.com/products')
 
     })
 
+let lov = document.querySelector('.fa-cart-plus').addEventListener('click',love)
 
- 
+function love() {
+    lov.clasList.add('red')
+}
 </script>
 
 
 <style scoped>
 .kattadiv {
     width: 100%;
-    height: 80e
+    height: auto;
  
 }
 
@@ -110,23 +113,26 @@ axios.get('https://fakestoreapi.com/products')
 
 .fa-heart {
     position: absolute;
-    left: 23%;
+    left: 83%;
     z-index: 2;
     margin-top: 20px;
     font-size: 25px;
-     
+ 
 }
 .fa-cart-plus{
     color: rgb(25, 25, 25) ;
     position: absolute  ;
-    left: 48vh;
-    margin-top: 28px;
-    font-size: 24px;
+    margin-top: 375px;
     border-radius: 50%;
-
+    z-index: 2;
+    background: none
 }
 .ddiv2 {
     text-align: center;
+}
+
+.red{
+    color: red;
 }
 
 </style>
