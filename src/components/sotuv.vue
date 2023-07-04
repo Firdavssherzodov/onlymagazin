@@ -37,8 +37,7 @@ axios.get('https://fakestoreapi.com/products')
 
     })
 
-let lov = document.querySelector('.fa-cart-plus').addEventListener('click',love)
-
+ 
 function love() {
     lov.clasList.add('red')
 }
