@@ -1,20 +1,22 @@
 <template>
-    <div class="kattadiv row ">
+    <div class="kattadiv row mt-5">
         <h2 class="h2">Sotuv Bo'limi</h2>
 
 
-        <div class="div1 col-3 mt-4 shadow-5" v-for="srt1 in srt">
+        <div class="div1 col-5 mt-4 shadow-5 card" v-for="srt1 in srt">
 
             
-            <div class="ddiv2">
+            <div class="ddiv2 ">
                 <img class="card-img-top" :src="srt1.image" alt="">
+                
             </div>
+            <i class="fas fa-heart"></i>
             <p class="p1 card-text">{{ srt1.title }}</p>
             <p class="p2  card-title"> <i class="i1 fas fa-star"></i> 4.5 (1255 marta)</p>
-           
-            <p class="p3 card-text">{{ srt1.price }}</p>
-            <h6 class="p4 card-text"> {{ srt1.price }}</h6>
-            <button type="button" class="btn btn-danger w-20 d-b ">Sotib olish</button>
+         
+            <p class="p3 card-text mt-3">{{ srt1.price }}$</p>
+            <h6 class="p4 card-text "> {{ srt1.price }}$</h6>
+            <i class="fa-solid fa-cart-plus fs-3" style="color: #626060;"></i>
         </div>
 
     </div>
@@ -39,53 +41,45 @@ axios.get('https://fakestoreapi.com/products')
  
 </script>
 
+
 <style scoped>
 .kattadiv {
     width: 100%;
-    height: 80em;
-    margin-top: 2%;
-    margin: auto !important;
+    height: 80e
+ 
 }
 
 .h2 {
-    padding: 30px;
+  
     color: black;
     font-family: 'Ubuntu', sans-serif;
 }
 
 .div1 {
     width: 40vh;
-    height: 65vh;
+    height: 60vh;
     transition: 0.5s;
     margin: 5vh;
     border-radius: 10px;
 }
 
 .div1 img {
-    width: 200px;
-    height: 250px;
+    width: 150px;
+    height: 200px;
     border-radius: 5px;
     position: relative;
     top: 10px;
-     
+    transition: 0.5s; 
 }
-.div1:hover{
-    transform: scale(1.01);
-    transition: 0.8s;
-    color: black;
-}
+.div1:hover img{
+    transform: scale(1.02);
+    transition: 0.5s;
 
-.div1 img:hover {
-    transform: scale(1.01);
-    transition: 0.8s;
-    
 }
 
 .p1 {
     font-size: 12px;
-    padding: 10px;
-    margin-top: 5px;
-
+    margin-top: 10px;
 }
 
 .p2 {
@@ -98,7 +92,7 @@ axios.get('https://fakestoreapi.com/products')
 
 .p3 {
     font-size: 12px;
-    padding: 10px;
+
     text-decoration: line-through;
     position: relative;
     top: 10px;
@@ -107,12 +101,11 @@ axios.get('https://fakestoreapi.com/products')
 
 .p4 {
     font-size: 15px;
-    padding: 10px;
-    margin-top: -24px;
+
 }
 
 .i1 {
-    color: orange;
+    color: orange !important;
 }
 
 .fa-heart {
@@ -121,12 +114,11 @@ axios.get('https://fakestoreapi.com/products')
     z-index: 2;
     margin-top: 20px;
     font-size: 25px;
-    color: red !important;
      
 }
-.fa-cart-plus {
-    color: rgb(25, 25, 25);
-    position: absolute;
+.fa-cart-plus{
+    color: rgb(25, 25, 25) ;
+    position: absolute  ;
     left: 48vh;
     margin-top: 28px;
     font-size: 24px;
@@ -136,8 +128,5 @@ axios.get('https://fakestoreapi.com/products')
 .ddiv2 {
     text-align: center;
 }
-.btn-danger{
-    display: block;
- margin: auto;
-}
+
 </style>
