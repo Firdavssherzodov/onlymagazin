@@ -10,13 +10,13 @@
                 <img class="card-img-top" :src="srt1.image" alt="">
                 
             </div>
-            <i class="fas fa-heart"></i>
+            <!-- <i class="fas fa-heart" :class="{ active: isActive }" @click="isActive = true"></i> -->
             <p class="p1 card-text">{{ srt1.title }}</p>
             <p class="p2  card-title"> <i class="i1 fas fa-star"></i> 4.5 (1255 marta)</p>
          
             <p class="p3 card-text mt-3">{{ srt1.price }}$</p>
             <h6 class="p4 card-text "> {{ srt1.price }}$</h6>
-            <i class="fa-solid fa-cart-plus fs-3" style="color: #626060;"></i>
+            <!-- <i class="fa-solid fa-cart-plus fs-3" style="color: #626060;" ></i> -->
         </div>
 
     </div>
@@ -26,48 +26,48 @@
 <script setup>
 import axios from 'axios'
 import { ref } from 'vue'
-
+let isActive = ref(false)
 let srt = ref([])
 axios.get('https://fakestoreapi.com/products')
     .then(resp => {
         resp.data.forEach(element => {
             srt.value.push(element)
-            console.log(element);
+        
         });
 
     })
 
  
-function love() {
-    lov.clasList.add('red')
-}
+ 
 </script>
 
 
 <style scoped>
+.active{
+  color: red;
+}
 .kattadiv {
     width: 100%;
-    height: auto;
+    height: 80em;
  
 }
 
 .h2 {
-  
-    color: black;
+  position: absolute;    color: black;
     font-family: 'Ubuntu', sans-serif;
+ 
 }
 
 .div1 {
     width: 40vh;
-    height: 60vh;
+    height: 50vh;
     transition: 0.5s;
     margin: 5vh;
     border-radius: 10px;
 }
-
 .div1 img {
-    width: 150px;
-    height: 200px;
+    width: 140px;
+    height: 190px;
     border-radius: 5px;
     position: relative;
     top: 10px;
@@ -130,8 +130,6 @@ function love() {
     text-align: center;
 }
 
-.red{
-    color: red;
-}
+ 
 
 </style>
