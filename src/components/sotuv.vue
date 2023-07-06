@@ -47,7 +47,7 @@ axios.get('https://fakestoreapi.com/products')
 }
 .div3{
     opacity: 0;
-    background-color: rgba(233, 5, 5, 0.301);
+    background-color: rgba(57, 57, 57, 0.301);
     width: 100%;
     height:100vh !important;
     margin: -120px -1px ;
