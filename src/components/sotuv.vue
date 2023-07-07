@@ -9,16 +9,17 @@
             <div class="ddiv2 ">
                 <img class="card-img-top" :src="srt1.image" alt="">
             </div>  
-            <div class="div3">
-                <!-- <i class="fa-solid fa-cart-plus fs-3" style="color: #ff0000;" ></i> -->
-                   <!-- <i class="fas fa-heart" :class="{ active: isActive }" @click="isActive = true"></i> -->
+            <div class="div3"> 
+                    <i class="fas fa-cart-arrow-down fs-5"></i>
+                     <i class="far fa-copy fs-5"></i>
+                     <i class="fas fa-heart fs-5" :class="{ active: isActive }" @click="isActive = true"></i> 
+                     <!-- <p class="p2 card-title">{{ srt1.title }}</p> -->
             </div>
-           
-                <p class="p3 card-title mt-3 text-center">{{ srt1.price }}$</p>
-                <h6 class="p4 card-title text-center fs-4 text-black"> {{ srt1.price }}$</h6>
+                 
+                    <p class="p3 card-title mt-3 text-center">{{ srt1.price }}$</p>
+                    <h6 class="p4 card-title text-center fs-4 text-black"> {{ srt1.price }}$</h6>
              
         </div>
-
     </div>
 </template>
 
@@ -54,6 +55,10 @@ axios.get('https://fakestoreapi.com/products')
     transform: translateY(0px);
     border-radius: 7px;
     display: flex;
+    justify-content:space-evenly;
+   padding-top: 25vh;
+
+    
 }
 .kattadiv {
     width: 100%;
@@ -89,19 +94,19 @@ axios.get('https://fakestoreapi.com/products')
 
 .div1:hover .div3{
   opacity: 10;
-    transition: 1.1s !important;
-    transform: translateY(-55px);
+    transition: 1.2s !important;
+    transform: translateY(-55px) !important;
     transform-origin:bottom top; 
 }
 
 .p1 {
     font-size: 10px;
-
+align-items: center;
 }
 
 .p2 {
     font-size: 10px;
-    color: rgb(143, 143, 143);
+    color: rgb(7, 7, 7);
 
 }
 
@@ -114,23 +119,26 @@ axios.get('https://fakestoreapi.com/products')
 
  
 
-.fa-heart {
+/* .fa-heart {
     position: absolute;
     left: 83%;
     z-index: 2;
     margin-top: 20px;
     font-size: 25px;
 
+} */
+.fa-cart-plus{
+    
 }
 
-.fa-cart-plus {
+/* .fa-cart-plus {
     color: rgb(25, 25, 25);
     position: absolute;
     margin-top: 375px;
     border-radius: 50%;
     z-index: 2;
     background: none
-}
+} */
 
 .ddiv2 {
     text-align: center;
