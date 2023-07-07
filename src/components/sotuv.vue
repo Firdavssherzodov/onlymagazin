@@ -51,7 +51,6 @@ axios.get('https://fakestoreapi.com/products')
     width: 100%;
     height:100vh !important;
     margin: -120px -1px ;
-
     transform: translateY(0px);
     border-radius: 7px;
     display: flex;
@@ -113,10 +112,7 @@ axios.get('https://fakestoreapi.com/products')
 
 }
 
-
-.i1 {
-    color: orange !important;
-}
+ 
 
 .fa-heart {
     position: absolute;
@@ -140,30 +136,5 @@ axios.get('https://fakestoreapi.com/products')
     text-align: center;
 }
 
-/* hover */
-/* .div3::before {  
-  transform: scaleX(0);
-  transform-origin: bottom right;
-}
 
-.div1:hover .div3::before {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-.div3::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  inset: 0 0 0 0;
-  background: hsl(200 100% 80%);
-  z-index: -1;
-  transition: transform .3s ease;
-}
-
-h1 {
-  position: relative;
-  font-size: 5rem;
-} */
 </style>
