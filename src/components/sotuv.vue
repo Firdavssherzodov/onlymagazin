@@ -144,10 +144,22 @@ align-items: center;
         height: auto;
         margin: 10px;
     }
+  
     .div1{
 width: 20vh;
 height: 26vh;
     }
+    .div3{
+        width: 100%;
+        height: 10vh !important;
+    }
+    .div1:hover .div3{
+  opacity: 10;
+    transition: 0.8s !important;
+    transform: translateY(-35px) !important;
+    transform-origin:bottom top; 
+}
+    
     .div1 img{
 width: 50px;
 height: 70px;
