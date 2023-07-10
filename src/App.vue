@@ -2,10 +2,14 @@
   <div>
     <nav1/>
     <Search/>
-    <carusel/>
+    <carusel/>      
     <router-view/>
     <sotuv/>
+
+    
   </div>
+ 
+ 
  </template>
  
  <script setup>
@@ -13,7 +17,9 @@
  import Search from "./components/Search.vue"
  import carusel from "./components/carusel.vue"
 //  import sotuv from "./components/sotuv.vue"
- </script>
+
+ 
+  </script>
  
  <style scoped>
  
