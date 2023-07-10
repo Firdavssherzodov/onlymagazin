@@ -58,8 +58,6 @@ axios.get('https://fakestoreapi.com/products')
     justify-content:space-evenly;
    padding-top: 25vh;
    color: rgba(0, 0, 0, 0.903);
-
-    
 }
 .i1:hover {
     transform: scale(1.1);
@@ -149,8 +147,6 @@ align-items: center;
     .div1{
 width: 20vh;
 height: 26vh;
- 
-
     }
     .div1 img{
 width: 50px;
