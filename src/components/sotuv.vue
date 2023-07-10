@@ -5,22 +5,21 @@
 
         <div class="div1 col-5 mt-4 shadow-5 card" v-for="srt1 in srt">
 
-            
+
             <div class="ddiv2 ">
                 <img class="card-img-top" :src="srt1.image" alt="">
-                
+            </div>  
+            <div class="div3">
+                <!-- <i class="fa-solid fa-cart-plus fs-3" style="color: #ff0000;" ></i> -->
+                   <!-- <i class="fas fa-heart" :class="{ active: isActive }" @click="isActive = true"></i> -->
             </div>
-            <!-- <i class="fas fa-heart" :class="{ active: isActive }" @click="isActive = true"></i> -->
-            <p class="p1 card-text">{{ srt1.title }}</p>
-            <p class="p2  card-title"> <i class="i1 fas fa-star"></i> 4.5 (1255 marta)</p>
-         
-            <p class="p3 card-text mt-3">{{ srt1.price }}$</p>
-            <h6 class="p4 card-text "> {{ srt1.price }}$</h6>
-            <!-- <i class="fa-solid fa-cart-plus fs-3" style="color: #626060;" ></i> -->
+           
+                <p class="p3 card-title mt-3 text-center">{{ srt1.price }}$</p>
+                <h6 class="p4 card-title text-center fs-4 text-black"> {{ srt1.price }}$</h6>
+             
         </div>
 
     </div>
-
 </template>
 
 <script setup>
@@ -32,79 +31,88 @@ axios.get('https://fakestoreapi.com/products')
     .then(resp => {
         resp.data.forEach(element => {
             srt.value.push(element)
-        
+
         });
 
     })
 
- 
- 
+
+
 </script>
 
 
 <style scoped>
-.active{
-  color: red;
+.active {
+    color: red;
+}
+.div3{
+    opacity: 0;
+    background-color: rgba(57, 57, 57, 0.301);
+    width: 100%;
+    height:100vh !important;
+    margin: -120px -1px ;
+
+    transform: translateY(0px);
+    border-radius: 7px;
+    display: flex;
 }
 .kattadiv {
     width: 100%;
     height: 80em;
- 
 }
 
 .h2 {
-  position: absolute;    color: black;
+
+    padding-left: 10vh;
+    color: black;
     font-family: 'Ubuntu', sans-serif;
- 
 }
 
 .div1 {
     width: 40vh;
-    height: 50vh;
+    height: 40vh;
     transition: 0.5s;
     margin: 5vh;
     border-radius: 10px;
+    
 }
+
 .div1 img {
-    width: 140px;
-    height: 190px;
+    width: 100px;
+    height: 140px;
     border-radius: 5px;
     position: relative;
-    top: 10px;
-    transition: 0.5s; 
-}
-.div1:hover img{
-    transform: scale(1.02);
     transition: 0.5s;
+    margin: 20px;
+ 
+}
 
+
+.div1:hover .div3{
+  opacity: 10;
+    transition: 1.1s !important;
+    transform: translateY(-55px);
+    transform-origin:bottom top; 
 }
 
 .p1 {
-    font-size: 12px;
-    margin-top: 10px;
+    font-size: 10px;
+
 }
 
 .p2 {
-    font-size: 12px;
-    padding: 10px;
+    font-size: 10px;
     color: rgb(143, 143, 143);
-    margin-top: -30px;
 
 }
 
 .p3 {
-    font-size: 12px;
-
+    font-size: 10px;
     text-decoration: line-through;
-    position: relative;
-    top: 10px;
+
 
 }
 
-.p4 {
-    font-size: 15px;
-
-}
 
 .i1 {
     color: orange !important;
@@ -116,20 +124,46 @@ axios.get('https://fakestoreapi.com/products')
     z-index: 2;
     margin-top: 20px;
     font-size: 25px;
- 
+
 }
-.fa-cart-plus{
-    color: rgb(25, 25, 25) ;
-    position: absolute  ;
+
+.fa-cart-plus {
+    color: rgb(25, 25, 25);
+    position: absolute;
     margin-top: 375px;
     border-radius: 50%;
     z-index: 2;
     background: none
 }
+
 .ddiv2 {
     text-align: center;
 }
 
- 
+/* hover */
+/* .div3::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
 
+.div1:hover .div3::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.div3::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: hsl(200 100% 80%);
+  z-index: -1;
+  transition: transform .3s ease;
+}
+
+h1 {
+  position: relative;
+  font-size: 5rem;
+} */
 </style>

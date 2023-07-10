@@ -3,7 +3,7 @@
     <nav1/>
     <Search/>
     <carusel/>
-    <router-view></router-view>
+    <router-view/>
     <sotuv/>
   </div>
  </template>
