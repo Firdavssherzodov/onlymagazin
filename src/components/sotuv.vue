@@ -116,30 +116,6 @@ align-items: center;
 
 
 }
-
- 
-
-/* .fa-heart {
-    position: absolute;
-    left: 83%;
-    z-index: 2;
-    margin-top: 20px;
-    font-size: 25px;
-
-} */
-.fa-cart-plus{
-    
-}
-
-/* .fa-cart-plus {
-    color: rgb(25, 25, 25);
-    position: absolute;
-    margin-top: 375px;
-    border-radius: 50%;
-    z-index: 2;
-    background: none
-} */
-
 .ddiv2 {
     text-align: center;
 }
