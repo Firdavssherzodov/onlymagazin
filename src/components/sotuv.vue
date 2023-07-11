@@ -186,6 +186,7 @@ height: 26vh;
     margin: 20px;
 }
 .div3{
+    
         width: 100%;
         height: 10vh;
 
