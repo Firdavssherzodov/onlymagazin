@@ -167,7 +167,7 @@ transition: 1.5s;
 background: rgb(4, 255, 71);
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 470px) {
     .kattadiv{
         width: 100%;
         height: auto;
@@ -230,7 +230,7 @@ height: 26vh;
 }
 
 
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 400px) {
     .kattadiv{
         width: 100%;
         height: auto;
