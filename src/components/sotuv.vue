@@ -52,6 +52,7 @@ axios.get('https://fakestoreapi.com/products')
     margin-top: 10px;
     margin-left: 70%;
     display: none;
+    
 }
 
 .active {
@@ -87,6 +88,7 @@ axios.get('https://fakestoreapi.com/products')
     transition: 0.5s;
     margin: 4vh;
     border-radius: 10px;
+    color: none;
  
 }
 
@@ -166,11 +168,11 @@ transition: 1.5s;
 background: rgb(4, 255, 71);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 400px) {
     .kattadiv{
         width: 100%;
         height: auto;
-        margin: 10px;
+        margin: 2px;
     }
   
     .div1{
