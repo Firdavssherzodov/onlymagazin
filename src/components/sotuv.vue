@@ -172,7 +172,7 @@ background: rgb(4, 255, 71);
     .kattadiv{
         width: 100%;
         height: auto;
-        margin: 2px;
+         
     }
   
     .div1{
