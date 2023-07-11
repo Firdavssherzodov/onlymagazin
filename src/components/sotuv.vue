@@ -99,7 +99,6 @@ axios.get('https://fakestoreapi.com/products')
     position: relative;
     transition: 0.5s;
     margin: 20px;
- 
 }
 .v1{
     width: 100%;
@@ -172,15 +171,13 @@ background: rgb(4, 255, 71);
     .kattadiv{
         width: 100%;
         height: auto;
-      
     }
-  
-    .div1{
+.div1{
 width: 20vh;
 height: 26vh;
 margin: 20px;
     }
-    .div1 img {
+.div1 img {
     width: 50px;
     height: 70px;
     border-radius: 5px;
@@ -188,7 +185,7 @@ margin: 20px;
     transition: 0.5s;
     margin: 20px;
 }
-    .div3{
+.div3{
         width: 100%;
         height: 10vh;
 
