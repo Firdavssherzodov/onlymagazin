@@ -4,24 +4,25 @@
 
 
         <div class="div1 col-5 mt-4 shadow-5 card" v-for="srt1 in srt">
+            <i class="fas fa-heart fs-6 ii3" :class="{ active: isActive }" @click="isActive = true"></i>
 
-
-            <div class="ddiv2 ">
+            <div class="ddiv2 "> 
                 <img class="card-img-top" :src="srt1.image" alt="">
             </div>  
             <div class="div3"> 
-                    <i class="fas fa-cart-arrow-down fs-5"></i>
-                     <i class="far fa-copy fs-5"></i>
-                     <i class="fas fa-heart fs-5" :class="{ active: isActive }" @click="isActive = true"></i> 
-                     <!-- <p class="p2 card-title">{{ srt1.title }}</p> -->
+                <div class="d1"><i class=" i1 fas fa-cart-arrow-down fs-5 "></i></div>
+                  <div class="d2"> <i class="far fa-copy fs-5 i2"></i></div>
+                     <div class="d3"><i class="fas fa-heart fs-5 i3" :class="{ active: isActive }" @click="isActive = true"></i> </div>
             </div>
-            <i class="fas fa-heart"></i>
-            <p class="p1 card-text">{{ srt1.title }}</p>
-            <p class="p2  card-title"> <i class="i1 fas fa-star"></i> 4.5 (1255 marta)</p>
          
-            <p class="p3 card-text mt-3">{{ srt1.price }}$</p>
-            <h6 class="p4 card-text "> {{ srt1.price }}$</h6>
-            <i class="fa-solid fa-cart-plus fs-3" style="color: #626060;"></i>
+            <p class="p3 card-title mt-3 text-center fs-7">{{ srt1.price }}$</p>
+            <h6 class="p4 card-title text-center fs-5"> {{ srt1.price }}$</h6>
+
+         
+       
+            
+ 
+
         </div>
     </div>
 </template>
@@ -46,6 +47,13 @@ axios.get('https://fakestoreapi.com/products')
 
 
 <style scoped>
+.ii3{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 70%;
+    display: none;
+}
+
 .active {
     color: red;
 }
@@ -59,9 +67,7 @@ axios.get('https://fakestoreapi.com/products')
     border-radius: 7px;
     display: flex;
     justify-content:space-evenly;
-   padding-top: 25vh;
-
-    
+    padding-top: 25vh;
 }
 .kattadiv {
     width: 100%;
@@ -76,12 +82,12 @@ axios.get('https://fakestoreapi.com/products')
 }
 
 .div1 {
-    width: 40vh;
+    width: 25vh;
     height: 40vh;
     transition: 0.5s;
-    margin: 5vh;
+    margin: 4vh;
     border-radius: 10px;
-    
+ 
 }
 
 .div1 img {
@@ -93,61 +99,71 @@ axios.get('https://fakestoreapi.com/products')
     margin: 20px;
  
 }
-
+.v1{
+    width: 100%;
+    height: 30vh !important;
+    border: solid red;
+    margin-bottom: 2vh  ;
+    display: flex;
+    justify-content: space-around;
+}
+ .btn{
+    font-size: 10px;
+    width: 10vh;
+    height: 4vh;
+ }
 
 .div1:hover .div3{
-  opacity: 10;
+    opacity: 10;
     transition: 1.2s !important;
     transform: translateY(-55px) !important;
     transform-origin:bottom top; 
 }
 
-.p1 {
-    font-size: 12px;
-    margin-top: 10px;
-}
-
-.p2 {
-    font-size: 12px;
-    padding: 10px;
-    color: rgb(143, 143, 143);
-    margin-top: -30px;
-
-}
-
 .p3 {
     font-size: 10px;
-    text-decoration: line-through;
- 
-
+    text-decoration: line-through; 
+    color: black;
 }
-
- 
-
-/* .fa-heart {
-    position: absolute;
-    left: 83%;
-    z-index: 2;
-    margin-top: 20px;
-    font-size: 25px;
-
-} */
-.fa-cart-plus{
-    
+.p4{
+    color: black;
 }
-
-/* .fa-cart-plus {
-    color: rgb(25, 25, 25);
-    position: absolute;
-    margin-top: 375px;
-    border-radius: 50%;
-    z-index: 2;
-    background: none
-} */
-
-.ddiv2 {
+ .ddiv2 {
     text-align: center;
-
+} 
+.d1{
+    width: 5vh;
+    height: 4.5vh;
+    padding: 1vh;
+   
+    border-radius: 50%;
+}
+.d2{
+    width: 5vh;
+    height: 4.5vh;
+    padding: 1vh;
+    border-radius: 50%;
+}
+.d3{
+    width: 5vh;
+    height: 4.5vh;
+    padding: 1vh;
+    border-radius: 50%;
+}
+.d1:hover{
+transform: rotate(360deg);
+transition: 1.5s;
+background: rgb(4, 255, 71);
+}
+.d2:hover{
+transform: rotate(360deg);
+transition: 1.5s;
+background: rgb(4, 255, 71);
+}
+.d3:hover{
+transform: rotate(360deg);
+transition: 1.5s;
+background: rgb(4, 255, 71);
 }
 
 @media screen and (max-width: 400px) {
@@ -161,21 +177,53 @@ axios.get('https://fakestoreapi.com/products')
 width: 20vh;
 height: 26vh;
     }
+    .div1 img {
+    width: 50px;
+    height: 70px;
+    border-radius: 5px;
+    position: relative;
+    transition: 0.5s;
+    margin: 20px;
+}
     .div3{
         width: 100%;
-        height: 10vh !important;
+        height: 10vh;
+
     }
     .div1:hover .div3{
   opacity: 10;
     transition: 0.8s !important;
     transform: translateY(-35px) !important;
     transform-origin:bottom top; 
+    transform: skewY(20deg);
 }
-
-
-h1 {
-  position: relative;
-  font-size: 5rem;
+ .p3{ 
+ 
+    font-size: 10px !important;
+    padding-top: -20px;
+ }
+ .p4{
+    font-size: 15px !important;
+ padding-top: -20px;
+ }
+ .d1{
+    display: none;
 }
+.d2{
+    display: none;
+}
+.d3{
+    display: none;
+}
+.div3{
+    display: none;
+}
+ .ii3{
+    display: block;
+ }
+ 
+ 
+ 
+ 
 }
 </style>
