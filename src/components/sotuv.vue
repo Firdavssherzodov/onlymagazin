@@ -222,6 +222,7 @@ height: 26vh;
 }
  .ii3{
     display: block;
+    
  }
  
  
