@@ -186,6 +186,69 @@ height: 26vh;
     margin: 20px;
 }
 .div3{
+
+        width: 100%;
+        height: 10vh;
+
+    }
+    .div1:hover .div3{
+  opacity: 10;
+    transition: 0.8s !important;
+    transform: translateY(-35px) !important;
+    transform-origin:bottom top; 
+    transform: skewY(20deg);
+}
+ .p3{ 
+ 
+    font-size: 10px !important;
+    padding-top: -20px;
+ }
+ .p4{
+    font-size: 15px !important;
+ padding-top: -20px;
+ }
+ .d1{
+    display: none;
+}
+.d2{
+    display: none;
+}
+.d3{
+    display: none;
+}
+.div3{
+    display: none;
+}
+ .ii3{
+    display: block;
+    
+ }
+ 
+ 
+ 
+ 
+}
+
+
+@media screen and (min-width: 360px) {
+    .kattadiv{
+        width: 100%;
+        height: auto;
+    }
+.div1{
+width: 20vh;
+height: 26vh;
+ margin: 20px;
+    }
+.div1 img {
+    width: 50px;
+    height: 70px;
+    border-radius: 5px;
+    position: relative;
+    transition: 0.5s;
+    margin: 20px;
+}
+.div3{
     
         width: 100%;
         height: 10vh;
