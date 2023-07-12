@@ -86,9 +86,9 @@ axios.get('https://fakestoreapi.com/products')
     width: 25vh;
     height: 40vh;
     transition: 0.5s;
-    margin: 4vh;
+    margin: 5vh;
     border-radius: 10px;
-    color: none;
+  
  
 }
 
@@ -155,16 +155,20 @@ axios.get('https://fakestoreapi.com/products')
 transform: rotate(360deg);
 transition: 1.5s;
 background: rgb(4, 255, 71);
+color: black;
 }
 .d2:hover{
 transform: rotate(360deg);
 transition: 1.5s;
 background: rgb(4, 255, 71);
+color: black;
 }
 .d3:hover{
 transform: rotate(360deg);
 transition: 1.5s;
 background: rgb(4, 255, 71);
+color: black;
+color: no;
 }
 
 @media screen and (max-width: 470px) {
@@ -175,7 +179,7 @@ background: rgb(4, 255, 71);
 .div1{
 width: 20vh;
 height: 26vh;
- margin: 20px;
+ margin: 20vh ;
     }
 .div1 img {
     width: 50px;
@@ -230,7 +234,7 @@ height: 26vh;
 }
 
 
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 400px) {
     .kattadiv{
         width: 100%;
         height: auto;
