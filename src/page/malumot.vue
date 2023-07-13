@@ -61,8 +61,8 @@ img {
 width: 80vh;
 height: 80vh;
 text-align: center;
-margin: auto;
-border-radius: 15px;
+    margin: 5vh;
+    border-radius: 15px;    
 position: relative;
 }
 
