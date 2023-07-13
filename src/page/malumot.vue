@@ -65,9 +65,7 @@ margin: auto;
 border-radius: 15px;
 position: relative;
 }
-button{
  
-}
 .d1{
     width: 50vh;
     height: 8vh; 
