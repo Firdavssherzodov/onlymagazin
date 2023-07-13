@@ -2,6 +2,7 @@
     <div>
 <nav1></nav1>
 <Search/>
+<bolim/>
 <carusel/>
 <sotuv/>
     </div>
@@ -12,6 +13,7 @@ import nav1 from './Header.vue'
 import Search from "./Search.vue"
 import carusel from './carusel.vue';
 import sotuv from './sotuv.vue';
+import bolim from'./bolimlar.vue'
 </script>
 
 <style scoped>

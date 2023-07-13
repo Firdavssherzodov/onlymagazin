@@ -1,6 +1,7 @@
 <template >
- 
+       <header1/>
     <div class="div  shadow-5 ">
+  
     <RouterLink class="i" to="/"><i class="fas fa-arrow-left"  >  back  </i></RouterLink> 
 
         <img :src="srt" alt="" class="">
@@ -18,11 +19,10 @@
 </template>
 
 <script setup>
- 
+ import header1 from '../components/Header.vue'
 import { RouterLink } from 'vue-router';
 import axios from 'axios'
  
-let isActive = ref(false)
 import { useRoute } from 'vue-router'
 let router = useRoute()
 let parmId = router.params.id
@@ -65,7 +65,7 @@ margin: auto;
 border-radius: 15px;
 position: relative;
 }
- 
+
 .d1{
     width: 50vh;
     height: 8vh; 
