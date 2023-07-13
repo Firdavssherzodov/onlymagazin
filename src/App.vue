@@ -3,7 +3,6 @@
     <nav1/>
     <Search/>
     <carusel/>      
-    <router-view/>
     <sotuv/>
 
     

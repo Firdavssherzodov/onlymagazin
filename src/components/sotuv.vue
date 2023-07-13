@@ -19,11 +19,10 @@
             <h6 class="p4 card-title text-center fs-5"> {{ srt1.price }}$</h6>
 
          
-       
+        </div>
+
             
  
-
-        </div>
     </div>
 </template>
 

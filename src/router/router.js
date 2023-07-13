@@ -1,5 +1,4 @@
 import { createRouter,createWebHistory } from 'vue-router'
-
 import sotuvchi from '../components/sotuv.vue'
 
 const route = [
