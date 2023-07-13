@@ -1,12 +1,20 @@
 import { createRouter,createWebHistory } from 'vue-router'
-import sotuvchi from '../components/sotuv.vue'
-
+import malumot from '../page/malumot.vue'
+import home from '../components/Home.vue'
 const route = [
     {
         path:'/',
-        name:'sotuv',
-        component:sotuvchi,
+        name:'home',
+        component:home,
+    },
+    {
+        path:'/malumot/:id',
+        component:malumot,
+        name:'malumot',
+        props:true
+    
     }
+
 ]
 
 let router = createRouter({
