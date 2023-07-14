@@ -7,8 +7,7 @@
 
             <img :src="srt" alt="" class="">
 
-            <h6 class="fs-6">Lorem ipsum dolor sit amet c eveniet necessitatibus <br>
-                laboriosam quas corrupti edit, iste <br> molestiae facilis blanditiis q di explicabo.</h6>
+            
 
 
         </div>
@@ -19,15 +18,18 @@
  
 
 <hr>
-<h5 class="hh5">salom lom1</h5>
-<p class="p2">salomlar 11</p>
+<h5 class="hh5">Количество:</h5>
+<p class="p2">В наличии 42</p>
              <div class="d1 shadow-3">
-                <span @click="count--">-</span>
+                <span @click="srt1" ref="nozim" class="cursor">-</span>
                 <h2>{{ count }} </h2>
                 <span type="button" @click="count++">+</span>
             </div>
-            <p class="p1">So'ma :</p>
-            <h5 class="h5">12.000$</h5>
+            <p class="p1">Цена:</p>
+            <h5 class="h5">{{ price*count }} $
+                <h5 class="p3">3 472 000 сум</h5>
+                <h5 class="hhh5">Чилля Базар</h5>
+</h5>
         </div>
 
 
@@ -44,31 +46,56 @@
 import header1 from '../components/Header.vue'
 import { RouterLink } from 'vue-router';
 import axios from 'axios'
-
+import { ref,onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 let router = useRoute()
 let parmId = router.params.id
-
+const isActive = ref(true)
 let srt = ref('')
+let price = ref('')
 axios.get(`https://fakestoreapi.com/products/${parmId}`)
     .then(resp1 => {
         srt.value = resp1.data.image
+        price.value = resp1.data.price
+        console.log(resp1);
  
     })
 
 
+const nozim = ref('')
+        let span = document.querySelector('.cursor')
+
+let srt1 = ()=>{
+    console.log(nozim._rawValue);
+    count.value--
+   if (count.value === 0) {
+    // span.classList.add('nimadir')
+    nozim._rawValue.style.visibility = 'collapse';
+   }
+    if(count.value > 1){
+    nozim._rawValue.style.visibility = 'visible';
+   }
+}
 
 
-import { ref } from 'vue'
-defineProps({
-    msg: String,
-})
-const count = ref(0)
+
+
+
+
+const count = ref(1)
 
 </script>
 
 <style scoped>
-.katta {}
+.nimadir {
+    pointer-events: none;
+}
+.nimadir1 {
+   pointer-events: all;
+}
+ .cursor{
+    cursor: pointer;
+ }
 
 .ikki {
     width: 69%;
@@ -81,8 +108,8 @@ const count = ref(0)
 
 
 img {
-    width: 25vh;
-    height: 30vh;
+    width: 35vh;
+    height: 55vh;
     margin-top: 10vh;
 }
 
@@ -112,8 +139,8 @@ img {
  
 
 .i {
-    margin-top: 30px;
-    margin-left: -10vh;
+    margin-top: 25px;
+    margin-left: -5vh;
     color: gray;
     position: absolute;
 }
@@ -152,6 +179,27 @@ span {
     top:57vh;
     left:50vh;
     color: rgb(139, 232, 0);
+}
+.p3{
+    position: absolute;
+    font-size: 15px;
+    top: -1px;
+    left:20vh;
+    width: 100px;
+    text-decoration: line-through;
+    color: grey;
+   
+}
+.hhh5{
+    position: absolute;
+    font-size: 15px;
+    top: -1px;
+    left:35vh;
+    width: 110px;
+    height: 25px;
+    background-color: blueviolet;
+    color: #fff;
+    padding: 3px;
 }
 </style>
 

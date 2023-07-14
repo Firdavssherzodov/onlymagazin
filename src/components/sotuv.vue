@@ -152,20 +152,20 @@ axios.get('https://fakestoreapi.com/products')
     border-radius: 50%;
 }
 .d1:hover{
-transform: rotate(360deg);
-transition: 1.5s;
+ transform: scale(1.1);
+transition: 1.2s;
 color: black;
 }
 .d2:hover{
-transform: rotate(360deg);
-transition: 1.5s;
+    transform: scale(1.1);
+transition: 1.1s;
 color: black;
 }
 .d3:hover{
-transform: rotate(360deg);
-transition: 1.5s;
+    transform: scale(1.1);
+transition: 1.1s;
 color: black;
-color: no;
+ 
 }
 
 @media screen and (max-width: 470px) {
@@ -231,5 +231,5 @@ height: 26vh;
 }
 
 
- 
+
 </style>
