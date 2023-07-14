@@ -3,7 +3,7 @@
     <div class="katta">
         <div class="div  shadow-5 ">
 
-            <RouterLink class="i" to="/"><i class="fas fa-arrow-left"> back </i></RouterLink>
+            <RouterLink class="i" to="/"><i class="fas fa-arrow-left   "> back </i></RouterLink>
 
             <img :src="srt" alt="" class="">
 
@@ -12,14 +12,17 @@
 
         </div>
         <div class="ikki shadow-5">
+            <p class="fa-heart1"> <i class="fas fa-heart fs-5" :class="{ active: isActive }" @click="isActive = true"></i> В желания</p>
+        <p class="d-flex" >   <i class="fas fa-star text-warning" style="margin-left:15px;"></i>  0.0 Оценок пока нет<p class=" text-Secondary "  style="  padding-left:15px; font-size: 15px;"> Нет заказов</p> </p>
+    
 
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quisquam provident saepe, unde vero dolorem ad soluta facere itaque distinctio pariatur. Cumque dolore odio ipsa, praesentium quis magnam cum ducimus?</p>
+<p class="pp1 fs-4 text-dark p-3"> {{ title }}</p>
 
  
 
 <hr>
 <h5 class="hh5">Количество:</h5>
-<p class="p2">В наличии 42</p>
+<p class="p2"> В наличии 42</p>
              <div class="d1 shadow-3">
                 <span @click="srt1" ref="nozim" class="cursor">-</span>
                 <h2>{{ count }} </h2>
@@ -53,11 +56,12 @@ let parmId = router.params.id
 const isActive = ref(true)
 let srt = ref('')
 let price = ref('')
+let title = ref('')
 axios.get(`https://fakestoreapi.com/products/${parmId}`)
     .then(resp1 => {
         srt.value = resp1.data.image
         price.value = resp1.data.price
-        console.log(resp1);
+        title.value = resp1.data.title
  
     })
 
@@ -87,6 +91,9 @@ const count = ref(1)
 </script>
 
 <style scoped>
+.active {
+    color: red;
+}
 .nimadir {
     pointer-events: none;
 }
@@ -201,6 +208,17 @@ span {
     color: #fff;
     padding: 3px;
 }
+.pp1{
+    padding-left:20vh !important;
+}
+ .fa-star{
+    padding-left:18vh !important;
+ }
+ .fa-heart1{
+    padding-left: 120vh;
+   position: absolute;
+   top: 2vh;
+ }
 </style>
 
  
