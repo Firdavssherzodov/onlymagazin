@@ -9,9 +9,7 @@
 <a href="">Bo'limlar</a>
 <a href="">Bo'limlar</a>
 <a href="">Bo'limlar</a>
-<a href="">Bo'limlar</a>
-<a href="">Bo'limlar</a>
-<a href="">Bo'limlar</a>
+ 
 
 
     </div>
@@ -42,6 +40,17 @@ a:hover{
  
     
 }
+@media screen and (max-width: 470px){
 
+
+.div a{
+    display: 
+    flex;
+    font-size: 10px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+}
+}
 
 </style>

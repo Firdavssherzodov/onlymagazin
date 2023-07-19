@@ -1,5 +1,6 @@
 <template >
     <header1 />
+ <search1/>
     <div class="katta">
         <div class="div  shadow-5 ">
 
@@ -41,6 +42,16 @@
                 <h5 class="p3">3 472 000 сум</h5>
                 <h5 class="hhh5">Чилля Базар</h5>
             </h5>
+<div class="did">
+<h5>От 5 160 сум/мес</h5>
+<p> в рассрочку</p>
+<i class="fas fa-angle-right"></i>
+</div>
+<div class="btns">
+    <button class="btn1">Добавить в корзину</button>
+    <button class="btn2">Купить в 1 клик</button>
+</div>
+            
         </div>
 
 
@@ -53,7 +64,7 @@
 </template>
 
 <script setup>
-
+import search1 from '../components/Search.vue'
 import header1 from '../components/Header.vue'
 import { RouterLink } from 'vue-router';
 import axios from 'axios'
@@ -99,6 +110,60 @@ const count = ref(1)
 </script>
 
 <style scoped>
+.btn1{
+    width: 40vh;
+    height: 8vh;   
+    background-color: #7000FF;
+    color: #fff;
+    padding: auto;
+    border-radius: 15px;
+    border: solid 1.5px #7000FF;
+    margin-left: 20vh;
+    margin-top: 5vh;
+}
+.btn2{
+    width: 40vh;
+    height: 8vh;
+    border: solid 2px #7000FF;
+    color: #7000FF;
+    border-radius: 15px;
+    margin-left: 2vh;
+    font-size: large;
+    font-weight: 500;
+}
+
+
+.fa-angle-right{
+    padding-top: 20px;
+    padding-left: 30vh;
+}
+.did{
+    width: 70vh;
+    height: 7vh;
+    border-radius: 10px;
+    background-color:#f5f6fa;
+    margin-top: 28vh;
+    display: flex;
+    color: black;
+    margin-left: 20vh;
+    
+}
+.did:hover{
+    background-color: rgba(128, 128, 128, 0.24);
+    
+} 
+.did p{
+    padding-top: 18px;
+}
+.did h5{
+margin: 13px;
+width: 180px;
+height: 35px;
+padding: 0.7vh;
+border-radius: 15px;
+color: black;
+background-color: rgb(251, 219, 37);
+}
 .active {
     color: red;
     cursor: pointer;
@@ -223,7 +288,7 @@ span {
     left: 35vh;
     width: 110px;
     height: 25px;
-    background-color: blueviolet;
+    background-color: rgba(137, 43, 226, 0.758);
     color: #fff;
     padding: 3.5px;
     padding-left: 7.5px;

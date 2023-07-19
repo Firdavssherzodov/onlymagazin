@@ -23,7 +23,7 @@
         </div>
 
             
-    <!-- </RouterLink> -->
+ 
     </div>
 </template>
 
@@ -36,7 +36,7 @@ axios.get('https://fakestoreapi.com/products')
     .then(resp => {
         resp.data.forEach(element => {
             srt.value.push(element)
-
+     
         });
 
     })
