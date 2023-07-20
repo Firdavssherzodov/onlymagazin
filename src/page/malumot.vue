@@ -195,6 +195,8 @@ img {
     width: 35vh;
     height: 55vh;
     margin-top: 10vh;
+    position: static;
+    bottom: 10vh;
 }
 
 .div {

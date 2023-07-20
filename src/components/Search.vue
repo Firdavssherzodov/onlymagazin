@@ -78,11 +78,15 @@
   </form>
       </div>
       <!-- Collapsible wrapper -->
+       
     </div>
     <!-- Container wrapper -->
+     
   </nav>
   <!-- Navbar -->
+ <RouterLink to="/admin"> <button type="button" class="btn btn-outline-secondary" data-mdb-ripple-color="dark">Secondary</button></RouterLink> 
 </section>
+ 
     </div>
 </template>
 
@@ -181,6 +185,9 @@ input:not(:placeholder-shown) ~ .reset {
 .form svg {
   width: 17px;
   margin-top: 3px;
+}
+.btn-outline-secondary{
+  margin-left: 125em;
 }
 
 </style>

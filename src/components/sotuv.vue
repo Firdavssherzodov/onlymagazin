@@ -3,7 +3,7 @@
         <h2 class="h2">Sotuv Bo'limi</h2>
 
 
-    <!-- <RouterLink to="/malumot" >      -->
+    
         <div   class="div1 col-5 mt-4 shadow-5 card" v-for="srt1 in srt"  >
             <i class="fas fa-heart fs-6 ii3" :class="{ active: isActive }" @click="isActive = true"></i>
 
@@ -36,7 +36,6 @@ axios.get('https://fakestoreapi.com/products')
     .then(resp => {
         resp.data.forEach(element => {
             srt.value.push(element)
-     
         });
 
     })
