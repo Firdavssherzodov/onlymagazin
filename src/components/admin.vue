@@ -35,6 +35,9 @@ import header3 from '../components/Header.vue'
 </script>
 
 <style  scoped>
+
+
+ 
 .div {
     width: 50%;
     height: 80vh;
@@ -42,7 +45,7 @@ import header3 from '../components/Header.vue'
     margin-top: 5vh;
 }
 .int {
-    width: 20vh;
+    width: 20.5vh;
     height: 30vh;
     border: none;
 }
