@@ -162,7 +162,7 @@ transition: 1.1s;
 color: black;
 }
 .d3:hover{
-    transform: scale(1.1);
+transform: scale(1.1);
 transition: 1.1s;
 color: black;
  
@@ -193,7 +193,7 @@ height: 26vh;
 
     }
     .div1:hover .div3{
-  opacity: 10;
+     opacity: 10;
     transition: 0.8s !important;
     transform: translateY(-35px) !important;
     transform-origin:bottom top; 
@@ -225,9 +225,7 @@ height: 26vh;
     
  }
  
- 
- 
- 
+
 }
 
 
