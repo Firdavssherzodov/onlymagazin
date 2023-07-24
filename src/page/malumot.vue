@@ -110,6 +110,8 @@ const count = ref(1)
 </script>
 
 <style scoped>
+
+ 
 .btn1{
     width: 40vh;
     height: 8vh;   
@@ -142,7 +144,7 @@ const count = ref(1)
     height: 7vh;
     border-radius: 10px;
     background-color:#f5f6fa;
-    margin-top: 28vh;
+    margin-top: 29vh;
     display: flex;
     color: black;
     margin-left: 20vh;
@@ -308,7 +310,7 @@ span {
 }
 
 .fa-heart1 {
-    padding-left: 120vh;
+    padding-left: 115vh;
     position: absolute;
     top: 4vh;
 }
@@ -316,7 +318,7 @@ span {
 .dft {
 padding-left: 2vh;
 padding-top: 4vh;
-}
+} 
 .ddd3 span{
     font-size: 14px !important;
     padding-left: 10vh;

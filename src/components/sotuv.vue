@@ -86,6 +86,7 @@ axios.get('https://fakestoreapi.com/products')
     height: 40vh;
     transition: 0.5s;
     margin: 5vh;
+    margin-left:8vh;
     border-radius: 10px;
   
  

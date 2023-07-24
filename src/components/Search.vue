@@ -187,7 +187,8 @@ input:not(:placeholder-shown) ~ .reset {
   margin-top: 3px;
 }
 .btn-outline-secondary{
-  margin-left: 125em;
+  margin-left: 137em;
+ 
 }
 
 </style>

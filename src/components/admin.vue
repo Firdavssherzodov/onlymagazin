@@ -60,7 +60,7 @@ import header3 from '../components/Header.vue'
 .lbl2{
     margin-left: 35vh;
     display: block;
-    margin-top: -36vh;
+    margin-top: -35.5vh;
     margin-bottom: 2vh;
 }
 .lbl3{
