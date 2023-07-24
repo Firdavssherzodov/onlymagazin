@@ -32,9 +32,9 @@
                     </ul>
                     <!-- Left links -->
                 </div>
-                <!-- Collapsible wrapper -->
+  
 
-                <!-- Right elements -->
+              
                 <div class="d-flex align-items-center">
                     <!-- Icon -->
                     <a class="text-reset me-3" href="#">
