@@ -168,15 +168,17 @@ color: black;
  
 }
 
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 570px) {
     .kattadiv{
         width: 100%;
         height: auto;
+        display: flex;
     }
 .div1{
 width: 20vh;
-height: 26vh;
- margin: 20vh ;
+height: 24vh;
+ margin: 5vh ;
+ margin-left: 7vh;
     }
 .div1 img {
     width: 50px;

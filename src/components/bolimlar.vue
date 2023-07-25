@@ -37,19 +37,24 @@ a:hover{
     transition: 1s !important;
     font-family: 'Hind Siliguri', sans-serif;
     border-bottom: 2px solid transparent;
- 
+
 }
-@media screen and (max-width: 470px){
+@media screen and (max-width: 570px){
 
-
-.div a{
-    display: 
-    flex;
-    font-size: 10px;
+ a{
+    display: flex;
+    font-size: 12px !important;
     justify-content: space-around;
     align-items: center;
-    margin: 5px;
+    
 }
+a:active{
+    color: rgb(240, 120, 120) !important;
+    transition: 1s !important;
+    font-family: 'Hind Siliguri', sans-serif;
+    border-bottom: 2px solid transparent;
+}
+
 }
 
 </style>
