@@ -38,7 +38,6 @@ a:hover{
     font-family: 'Hind Siliguri', sans-serif;
     border-bottom: 2px solid transparent;
  
-    
 }
 @media screen and (max-width: 470px){
 

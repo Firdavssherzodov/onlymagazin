@@ -190,7 +190,6 @@ height: 26vh;
 
         width: 100%;
         height: 10vh;
-
     }
     .div1:hover .div3{
      opacity: 10;
