@@ -91,7 +91,6 @@ axios.get('https://fakestoreapi.com/products')
   
  
 }
-
 .div1 img {
     width: 100px;
     height: 140px;
@@ -224,11 +223,12 @@ height: 24vh;
  .ii3{
     display: block;
     
- }
+ } */
+ 
+
  
 
 }
-
 
 
 </style>
