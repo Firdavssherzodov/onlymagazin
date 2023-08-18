@@ -46,6 +46,7 @@ a:hover{
     font-size: 12px !important;
     justify-content: space-around;
     align-items: center;
+    font-family: 'REM', sans-serif;
     
 }
 a:active{
@@ -56,5 +57,6 @@ a:active{
 }
 
 }
+ 
 
 </style>

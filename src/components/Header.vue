@@ -8,7 +8,7 @@
                 <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-bars "></i>
                 </button>
 
                 <!-- Collapsible wrapper -->
@@ -38,14 +38,14 @@
                 <div class="d-flex align-items-center">
                     <!-- Icon -->
                     <a class="text-reset me-3" href="#">
-                        <i class="far fa-heart"></i>
+               <router-link to="/like">  <i class="far fa-heart fs-4 "></i> </router-link>  
                     </a>
 
                     <!-- Notifications -->
                     <div class="dropdown">
                         <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
                             role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-shopping-cart"></i>
+                            <i class="fas fa-shopping-cart fs-5 m-2"></i>
                          
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">

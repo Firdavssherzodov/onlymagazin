@@ -58,21 +58,21 @@ import header3 from '../components/Header.vue'
     height: 5vh;
 }
 .lbl2{
-    margin-left: 35vh;
+    margin-left: 32.5vh;
     display: block;
     margin-top: -35.5vh;
     margin-bottom: 2vh;
 }
 .lbl3{
-    margin-left: 35vh;
+    margin-left: 32.5vh;
     margin-bottom: 2vh;
 }
 .lbl4{
-    margin-left: 35vh;
+    margin-left: 32.5vh;
 }
 .bt1{
         margin-top: 5vh;
-        margin-left: 51.5vh;
+        margin-left: 47.5vh;
 }
 .bt2{
         margin-left: 5vh;

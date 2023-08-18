@@ -32,7 +32,11 @@ import axios from 'axios'
 import { ref } from 'vue'
 let isActive = ref(false)
 let srt = ref([])
-axios.get('https://fakestoreapi.com/products')
+
+const api ='https://fakestoreapi.com/products'
+
+
+axios.get( api )
     .then(resp => {
         resp.data.forEach(element => {
             srt.value.push(element)
@@ -72,6 +76,7 @@ axios.get('https://fakestoreapi.com/products')
 .kattadiv {
     width: 100%;
     height: 80em;
+   
 }
 
 .h2 {
@@ -176,7 +181,7 @@ color: black;
 .div1{
 width: 20vh;
 height: 24vh;
- margin: 5vh ;
+ margin: 5vh;
  margin-left: 7vh;
     }
 .div1 img {
@@ -189,13 +194,13 @@ height: 24vh;
 }
 .div3{
 
-        width: 100%;
-        height: 10vh;
+        width: 100% !important;
+        height: 0.5px !important;
     }
     .div1:hover .div3{
      opacity: 10;
     transition: 0.8s !important;
-    transform: translateY(-35px) !important;
+    transform: translateY(-1px) !important;
     transform-origin:bottom top; 
     transform: skewY(20deg);
 }
@@ -208,7 +213,7 @@ height: 24vh;
     font-size: 15px !important;
  padding-top: -20px;
  }
- .d1{
+ /* .d1{
     display: none;
 }
 .d2{
@@ -224,11 +229,12 @@ height: 24vh;
     display: block;
     
  } */
- 
+  
 
  
 
 }
+
 
 
 </style>

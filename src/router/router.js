@@ -2,6 +2,7 @@ import { createRouter,createWebHistory } from 'vue-router'
 import malumot from '../page/malumot.vue'
 import home from '../components/Home.vue'
 import admin from '../components/admin.vue'
+import like from '../page/like.vue'
 const route = [
     {
         path:'/',
@@ -20,7 +21,13 @@ const route = [
         component:admin,
         name:'admin',
 
+    },
+    {
+        path:'/like',
+        component:like,
+        name:'like',
     }
+
 
 ]
 
