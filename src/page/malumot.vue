@@ -33,9 +33,9 @@
             <h5 class="hh5">Количество:</h5>
             <p class="p2"> В наличии 42</p>
             <div class="d1 shadow-3">
-                <span @click="srt1" ref="nozim" class="cursor">-</span>
+                <span @click="srt1" ref="nozim" class="cursor sapma" >-</span>
                 <h2>{{ count }} </h2>
-                <span type="button" @click="count++">+</span>
+                <span type="button" @click="count++" class="sapma">+</span>
             </div>
             <p class="p1">Цена:</p>
             <h5 class="h5">{{ price * count }} $
@@ -340,7 +340,9 @@ padding-top: 4vh;
 .s1{
     padding-right:3vh !important;
 }
-
+.sapma::selection{
+    background: none;
+}
  
 
 

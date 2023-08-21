@@ -4,17 +4,18 @@
 
 
     
-        <div   class="div1 col-5 mt-4 shadow-5 card" v-for="srt1 in srt"  >
+        <div   class="div1 col-5 mt-4 shadow-6 card" v-for="srt1 in srt"  >
             <i class="fas fa-heart fs-6 ii3" :class="{ active: isActive }" @click="isActive = true"></i>
 
             <div class="ddiv2 "> 
                 <img class="card-img-top" :src="srt1.image" alt="">
             </div>  
-            <div class="div3"> 
+            <div class="div3 div33"> 
                 <div class="d1"><RouterLink :to="{name:'malumot', params:{id:srt1.id}}"><i class=" i1 fas fa-cart-arrow-down fs-5 "></i></RouterLink></div>
                   <div class="d2"> <i class="far fa-copy fs-5 i2"></i></div>
                      <div class="d3"><i class="fas fa-heart fs-5 i3" :class="{ active: isActive }" @click="isActive = true"></i> </div>
             </div>
+            <p class=" text-black p-2 card-title text1" style="font-size: small;">{{ srt1.title }}</p>
          
             <p class="p3 card-title mt-3 text-center fs-7">{{ srt1.price }}$</p>
             <h6 class="p4 card-title text-center fs-5"> {{ srt1.price }}$</h6>
@@ -66,12 +67,14 @@ axios.get( api )
     background-color: rgba(57, 57, 57, 0.301);
     width: 100%;
     height:100vh !important;
-    margin: -120px -1px ;
-    transform: translateY(0px);
+    margin: -100.5px 1px;
+
+    /* transform: translateY();  */
     border-radius: 7px;
     display: flex;
     justify-content:space-evenly;
-    padding-top: 25vh;
+    padding-top: 20vh;
+   
 }
 .kattadiv {
     width: 100%;
@@ -124,6 +127,10 @@ axios.get( api )
     transform: translateY(-55px) !important;
     transform-origin:bottom top; 
 }
+.div1:hover .text-black{
+    transition: 4s;
+    display: none;
+}
 
 .p3 {
     font-size: 10px;
@@ -171,60 +178,70 @@ color: black;
  
 }
 
-@media screen and (max-width: 570px) {
+@media  (min-width: 768px) and (max-width: 991px) {
     .kattadiv{
         width: 100%;
         height: auto;
         display: flex;
     }
 .div1{
-width: 20vh;
-height: 24vh;
- margin: 5vh;
- margin-left: 7vh;
+width: 30vh;
+height: 35vh;
+margin: 5vh;
+ margin-left: 8vh;
     }
 .div1 img {
-    width: 50px;
-    height: 70px;
+    width: 100px;
+    height: 115px;
     border-radius: 5px;
     position: relative;
     transition: 0.5s;
-    margin: 20px;
+    margin-top: 25px;
 }
-.div3{
+.div33{
 
         width: 100% !important;
-        height: 0.5px !important;
+        height:  100% !important;  
+        
     }
-    .div1:hover .div3{
+    .div1:active .div3{
      opacity: 10;
     transition: 0.8s !important;
-    transform: translateY(-1px) !important;
+    transform: translateY(-10px) !important;
     transform-origin:bottom top; 
-    transform: skewY(20deg);
+    transform: skewY(10deg);
 }
  .p3{ 
- 
-    font-size: 10px !important;
-    padding-top: -20px;
+    font-size: 12px !important;
+    padding-top: -30px !important;
  }
  .p4{
-    font-size: 15px !important;
- padding-top: -20px;
+    font-size: 20px !important;
+     padding-top: -12px !important;
  }
- /* .d1{
-    display: none;
-}
-.d2{
-    display: none;
-}
-.d3{
-    display: none;
-}
+
+ .text1{
+    font-size: 10.5px !important;
+ }
+ .text1:active{
+    display: block;
+ }
  .h2{
     margin: 2vh;
  }
 
+}
+@media  (min-width: 665) and (max-width: 768){
+    .kattadiv{
+        width: auto;
+        height: auto;
+    }
+    .div1{
+width: 30vh;
+height: 35vh;
+ 
+
+    }
 }
 
 

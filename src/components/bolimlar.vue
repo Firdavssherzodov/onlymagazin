@@ -39,14 +39,16 @@ a:hover{
     border-bottom: 2px solid transparent;
 
 }
-@media screen and (max-width: 570px){
+@media (min-width: 768px) and (max-width: 991px){
 
  a{
     display: flex;
-    font-size: 12px !important;
+    font-size: 13px !important;
     justify-content: space-around;
     align-items: center;
-    font-family: 'REM', sans-serif;
+    font-family: 'Mukta', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-weight: 600;
     
 }
 a:active{
