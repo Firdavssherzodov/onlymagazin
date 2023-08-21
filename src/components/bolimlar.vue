@@ -49,6 +49,7 @@ a:hover{
     font-family: 'Mukta', sans-serif;
 font-family: 'Poppins', sans-serif;
 font-weight: 600;
+overflow-x: hidden;
     
 }
 a:active{
