@@ -50,6 +50,7 @@ a:hover{
 font-family: 'Poppins', sans-serif;
 font-weight: 600;
 overflow-x: hidden;
+display: none;
     
 }
 a:active{
