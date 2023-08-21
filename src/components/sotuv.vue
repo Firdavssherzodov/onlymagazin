@@ -140,7 +140,6 @@ axios.get( api )
     width: 5vh;
     height: 4.5vh;
     padding: 1vh;
-   
     border-radius: 50%;
 }
 .d2{
@@ -222,16 +221,9 @@ height: 24vh;
 .d3{
     display: none;
 }
-.div3{
-    display: none;
-}
- .ii3{
-    display: block;
-    
- } */
-  
-
- 
+ .h2{
+    margin: 2vh;
+ }
 
 }
 
