@@ -15,8 +15,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Navbar brand -->
                     <a class="navbar-brand mt-2 mt-lg-0 " href="#">
-                        <img src="https://static.vecteezy.com/system/resources/previews/001/209/332/original/lion-png.png" height="15"
-                            alt="MDB Logo" loading="lazy" />
+                 <router-link to="/">      <img class="m-3" src="https://static.vecteezy.com/system/resources/previews/001/209/332/original/lion-png.png" height="35"
+                            alt="MDB Logo" loading="lazy" /></router-link>  
                     </a>
                     <!-- Left links -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -37,18 +37,20 @@
               
                 <div class="d-flex align-items-center">
                     <!-- Icon -->
-                    <a class="text-reset me-3" href="#">
-               <router-link to="/like">  <i class="far fa-heart fs-4 "></i> </router-link>  
+           
+                        <a class="text-reset me-3" href="#">
+               <router-link to="/like"> <i class="fa-solid fa-heart fa-shake fs-3 text-danger" style="color: #e51010;"></i> </router-link>  
                     </a>
+                     
 
                     <!-- Notifications -->
                     <div class="dropdown">
                         <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
                             role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-shopping-cart fs-5 m-2"></i>
+                      <i class="fa-solid fa-cart-plus fs-4 p-3" style="color: #4213c3;" ></i> 
                          
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                        <!-- <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
                             <li>
                                 <a class="dropdown-item" href="#">Some news</a>
                             </li>
@@ -58,13 +60,13 @@
                             <li>
                                 <a class="dropdown-item" href="#">Something else here</a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </div>
                     <!-- Avatar -->
                     <div class="dropdown">
                         <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
                             id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25"
+                            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="35"
                                 alt="Black and White Portrait of a Man" loading="lazy" />
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">

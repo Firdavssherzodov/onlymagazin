@@ -1,9 +1,13 @@
 <template>
     <div class="kattadiv row mt-5">
-        <h2 class="h2">Sotuv Bo'limi</h2>
-
-
+        <h2 class="h2 m-4">Sotuv Bo'limi</h2>
     
+      
+     
+        <div   class="div1 col-5 mt-4 shadow-6 card" v-for="srt1 in srt" >
+
+           
+      
             <i class="fas fa-heart fs-6 ii3" :class="{ active: isActive }" @click="isActive = true"></i>
 
             <div class="ddiv2 "> 
@@ -45,11 +49,18 @@ axios.get( api )
     })
 
 
+ 
+ 
+
 
 </script>
 
 
 <style scoped>
+.diva{
+    display: block;
+}
+
 .ii3{
     position: absolute;
     margin-top: 10px;
@@ -66,7 +77,7 @@ axios.get( api )
     background-color: rgba(57, 57, 57, 0.301);
     width: 100%;
     height:100vh !important;
-    margin: -100.5px 1px;
+    margin: -110.5px 1px;
 
     /* transform: translateY();  */
     border-radius: 7px;

@@ -4,7 +4,7 @@
     <div class="katta">
         <div class="div  shadow-5 ">
 
-            <RouterLink class="i" to="/"><i class="fas fa-arrow-left   "> back </i></RouterLink>
+            <RouterLink class="i" to="/"><i class="fas fa-arrow-left"> Sotuvni davom etirish </i></RouterLink>
 
             <img :src="srt" alt="" class="">
 
@@ -13,7 +13,7 @@
 
         </div>
         <div class="ikki shadow-5">
-            <p class="fa-heart1"> <i class="fas fa-heart fs-5" :class="{ active: isActive }" @click="isActive = true"></i> В
+            <p class="fa-heart1"> <i class="fas fa-heart fs-4" :class="{ active: isActive }" @click="isActive = true"></i> В
                 желания</p>
             <p class="dft d-flex fs-6" > <i class="fas fa-star text-warning fs-6"></i>  1.0 ( Оценок пока нет )
             <p class=" text-Secondary " style="padding-left:15px; font-size: 15px;"> Нет заказов</p>
@@ -34,7 +34,7 @@
             <p class="p2"> В наличии 42</p>
             <div class="d1 shadow-3">
                 <span @click="srt1" ref="nozim" class="cursor sapma" >-</span>
-                <h2>{{ count }} </h2>
+                <h2 class="h12">{{ count }} </h2>
                 <span type="button" @click="count++" class="sapma">+</span>
             </div>
             <p class="p1">Цена:</p>
@@ -48,7 +48,7 @@
 <i class="fas fa-angle-right"></i>
 </div>
 <div class="btns">
-    <button class="btn1">Добавить в корзину</button>
+ <router-link to="/savat"> <button class="btn1" @click="addItem">Добавить в корзину</button> </router-link>
     <button class="btn2">Купить в 1 клик</button>
 </div>
             
@@ -64,6 +64,7 @@
 </template>
 
 <script setup>
+import { storage } from '../store/store';
 import search1 from '../components/Search.vue'
 import header1 from '../components/Header.vue'
 import { RouterLink } from 'vue-router';
@@ -76,13 +77,32 @@ const isActive = ref(true)
 let srt = ref('')
 let price = ref('')
 let title = ref('')
-axios.get(`https://fakestoreapi.com/products/${parmId}`)
+let obeckt;
+
+
+
+  onMounted(()=>{
+    axios.get(`https://fakestoreapi.com/products/${parmId}`)
     .then(resp1 => {
+
         srt.value = resp1.data.image
         price.value = resp1.data.price
         title.value = resp1.data.title
+         obeckt = {
+              img:resp1.data.image,
+              price:resp1.data.price,
+              title:resp1.data.title
+        }
+        
 
     })
+})
+
+const addItem = () => {
+    storage.value.push(obeckt)
+}
+ 
+
 
 
 const nozim = ref('')
@@ -95,17 +115,27 @@ let srt1 = () => {
         // span.classList.add('nimadir')
         nozim._rawValue.style.visibility = 'collapse';
     }
-    if (count.value > 1) {
+    if (count.value >= 10) {
         nozim._rawValue.style.visibility = 'visible';
+         
     }
 }
+ 
+ 
 
 const count = ref(1)
+
 
 </script>
 
 <style scoped>
 
+.sapma::selection{
+    display: none;
+}
+.h12::selection{
+    display: none;
+}
  
 .btn1{
     width: 40vh;
@@ -335,9 +365,7 @@ padding-top: 4vh;
 .s1{
     padding-right:3vh !important;
 }
-.sapma::selection{
-    background: none;
-}
+
  
 
 

@@ -3,6 +3,7 @@ import malumot from '../page/malumot.vue'
 import home from '../components/Home.vue'
 import admin from '../components/admin.vue'
 import like from '../page/like.vue'
+import savat from '../components/savat/savat.vue'
 const route = [
     {
         path:'/',
@@ -26,7 +27,13 @@ const route = [
         path:'/like',
         component:like,
         name:'like',
+    },
+    {
+        path:'/savat',
+        component:savat,
+        name:savat
     }
+  
 
 
 ]
