@@ -112,7 +112,6 @@ let srt1 = () => {
     console.log(nozim._rawValue);
     count.value--
     if (count.value === 0) {
-        // span.classList.add('nimadir')
         nozim._rawValue.style.visibility = 'collapse';
     }
     if (count.value >= 10) {

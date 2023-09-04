@@ -1,28 +1,4 @@
 
-
-<script setup>
-import nav2 from '../Header.vue'
- 
-
-
-
-
-
-
-const getNAME = JSON.parse(localStorage.getItem('malumot'))
-
- 
-
- 
-
-
-
-
-
-</script>
-
-
-
 <template>
   <nav2 />
 
@@ -47,15 +23,10 @@ const getNAME = JSON.parse(localStorage.getItem('malumot'))
 
           
           <a href="#!" class="btn btn-primary ">clearance</a>
-
           <a href="#!" class="btn btn-danger ml-3 ">delete</a>
         </div>
       </div>
-
     </div>
-
-
-
   </div>
 </template>
 
