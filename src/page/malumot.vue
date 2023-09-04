@@ -100,11 +100,6 @@ let srt1 = () => {
     }
 }
 
-
-
-
-
-
 const count = ref(1)
 
 </script>

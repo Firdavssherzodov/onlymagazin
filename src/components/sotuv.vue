@@ -4,7 +4,6 @@
 
 
     
-        <div   class="div1 col-5 mt-4 shadow-6 card" v-for="srt1 in srt"  >
             <i class="fas fa-heart fs-6 ii3" :class="{ active: isActive }" @click="isActive = true"></i>
 
             <div class="ddiv2 "> 
