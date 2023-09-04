@@ -29,7 +29,7 @@ const route = [
         name:'like',
     },
     {
-        path:'/savat',
+        path:'/savat1',
         component:savat,
         name:savat
     }

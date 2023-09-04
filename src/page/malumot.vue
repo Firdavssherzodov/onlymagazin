@@ -72,6 +72,7 @@ import axios from 'axios'
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 let router = useRoute()
+console.log("router.params", router)
 let parmId = router.params.id
 const isActive = ref(true)
 let srt = ref('')
@@ -79,27 +80,32 @@ let price = ref('')
 let title = ref('')
 let obeckt;
 
-
+const newStorage = [JSON.parse(localStorage.getItem("product")) || []]
+console.log("newStorage", newStorage)
 
   onMounted(()=>{
     axios.get(`https://fakestoreapi.com/products/${parmId}`)
     .then(resp1 => {
-
-        srt.value = resp1.data.image
-        price.value = resp1.data.price
-        title.value = resp1.data.title
+        console.log(resp1)
+        srt.value = resp1.data.image,
+        price.value = resp1.data.price,
+        title.value = resp1.data.title,
          obeckt = {
               img:resp1.data.image,
               price:resp1.data.price,
               title:resp1.data.title
         }
-        
-
+        // localStorage.setItem("product", JSON.stringify( {
+        //       img:resp1.data.image,
+        //       price:resp1.data.price,
+        //       title:resp1.data.title
+        // }))
     })
 })
 
 const addItem = () => {
-    storage.value.push(obeckt)
+    newStorage.push(obeckt)
+    localStorage.setItem("product", JSON.stringify(newStorage))
 }
  
 
@@ -160,15 +166,16 @@ const count = ref(1)
 
 
 .fa-angle-right{
-    padding-top: 20px;
-    padding-left: 30vh;
+    padding-top: 37px;
+    padding-left: 40vh;
+    
 }
 .did{
     width: 70vh;
     height: 7vh;
     border-radius: 10px;
     background-color:#f5f6fa;
-    margin-top: 29vh;
+    margin-top: 30vh;
     display: flex;
     color: black;
     margin-left: 20vh;
@@ -179,13 +186,14 @@ const count = ref(1)
     
 } 
 .did p{
-    padding-top: 18px;
+    padding-top: 30px;
 }
 .did h5{
 margin: 13px;
 width: 180px;
 height: 35px;
-padding: 0.7vh;
+padding: 0.6vh;
+ margin-top: 25px;
 border-radius: 15px;
 color: black;
 background-color: rgb(251, 219, 37);
@@ -271,7 +279,7 @@ span {
 
 .h5 {
     position: absolute;
-    top: 56vh;
+    top: 53.5vh;
     left: 20vh;
     color: black;
     font-size: 22px;

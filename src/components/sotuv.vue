@@ -14,7 +14,7 @@
                 <img class="card-img-top" :src="srt1.image" alt="">
             </div>  
             <div class="div3 div33"> 
-                <div class="d1"><RouterLink :to="{name:'malumot', params:{id:srt1.id}}"><i class=" i1 fas fa-cart-arrow-down fs-5 "></i></RouterLink></div>
+                <div class="d1"><RouterLink :to="{name:'malumot', params:{id:srt1.id} , state: str}"><i class=" i1 fas fa-cart-arrow-down fs-5 "></i></RouterLink></div>
                   <div class="d2"> <i class="far fa-copy fs-5 i2"></i></div>
                      <div class="d3"><i class="fas fa-heart fs-5 i3" :class="{ active: isActive }" @click="isActive = true"></i> </div>
             </div>
