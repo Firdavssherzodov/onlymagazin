@@ -78,7 +78,6 @@ axios.get( api )
     width: 100%;
     height:100vh !important;
     margin: -110.5px 1px;
-
     /* transform: translateY();  */
     border-radius: 7px;
     display: flex;
@@ -106,14 +105,11 @@ axios.get( api )
     margin: 5vh;
     margin-left:8vh;
     border-radius: 10px;
-  
- 
 }
 .div1 img {
     width: 100px;
     height: 140px;
     border-radius: 5px;
-    position: relative;
     transition: 0.5s;
     margin: 20px;
 }

@@ -14,7 +14,6 @@ const route = [
         path:'/malumot/:id',
         component:malumot,
         name:'malumot',
-        props:true
     
     },
     {
