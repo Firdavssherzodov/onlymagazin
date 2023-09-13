@@ -47,7 +47,7 @@
                     <div class="dropdown">
                         <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
                             role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-            <router-link to="/savat1">   <i class="fa-solid fa-cart-plus fs-4 p-3" style="color: #4213c3;" ></i>  </router-link>  
+            <router-link  to="/savat">   <i class="fa-solid fa-cart-plus fs-4 p-3" style="color: #4213c3;" ></i>  </router-link>  
                          
                         </a>
                         <!-- <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">

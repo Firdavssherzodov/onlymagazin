@@ -4,7 +4,7 @@
     
       
      
-        <div   class="div1 col-5 mt-4 shadow-6 card" v-for="srt1 in srt" >
+        <div   class="div1 col-5 mt-4 shadow-6 card" v-for="srt1 in srt" :key="srt1">
 
            
       
@@ -14,14 +14,14 @@
                 <img class="card-img-top" :src="srt1.image" alt="">
             </div>  
             <div class="div3 div33"> 
-                <div class="d1"><RouterLink :to="{name:'malumot', params:{id:srt1.id} , state: str}"><i class=" i1 fas fa-cart-arrow-down fs-5 "></i></RouterLink></div>
-                  <div class="d2"> <i class="far fa-copy fs-5 i2"></i></div>
-                     <div class="d3"><i class="fas fa-heart fs-5 i3" :class="{ active: isActive }" @click="isActive = true"></i> </div>
+                <div class="d1"><RouterLink :to="{name:'malumot', params:{id:srt1.id}}"><i class=" i1 fas fa-cart-arrow-down fs-3 "></i></RouterLink></div>
+                  <div class="d2"> <i class="far fa-copy fs-3 i2"></i></div>
+                     <div class="d3"><i class="fas fa-heart fs-3 i3" :class="{ active: isActive }" @click="isActive = true"></i> </div>
             </div>
-            <p class=" text-black p-2 card-title text1" style="font-size: small;">{{ srt1.title }}</p>
+            <p class=" text-black p-2 card-title text1" style="font-size: large;">{{ srt1.title }}</p>
          
-            <p class="p3 card-title mt-3 text-center fs-7">{{ srt1.price }}$</p>
-            <h6 class="p4 card-title text-center fs-5"> {{ srt1.price }}$</h6>
+            <p class="p3 card-title mt-5 text-center fs-7">{{ srt1.description }}$</p>
+            <h6 class="p4 card-title text-center fs-5"> {{ srt1.description }}$</h6>
 
          
         </div>
@@ -37,15 +37,17 @@ import { ref } from 'vue'
 let isActive = ref(false)
 let srt = ref([])
 
-const api ='https://fakestoreapi.com/products'
+const api ='https://yangi-travel.onrender.com/'
 
 
 axios.get( api )
     .then(resp => {
-        resp.data.forEach(element => {
+        resp.data.travels.forEach(element => {
             srt.value.push(element)
-        });
 
+            
+        });
+        
     })
 
 
@@ -74,15 +76,16 @@ axios.get( api )
 }
 .div3{
     opacity: 0;
-    background-color: rgba(57, 57, 57, 0.301);
+    /* background-color: rgba(57, 57, 57, 0.301); */
     width: 100%;
-    height:100vh !important;
+    height:1000px !important;
     margin: -110.5px 1px;
     /* transform: translateY();  */
     border-radius: 7px;
     display: flex;
     justify-content:space-evenly;
-    padding-top: 20vh;
+    padding-top: 28vh;
+    z-index: 44;
    
 }
 .kattadiv {
@@ -107,11 +110,13 @@ axios.get( api )
     border-radius: 10px;
 }
 .div1 img {
-    width: 100px;
-    height: 140px;
+    position: absolute;
+    width: 250px;
+    height: 240px;
     border-radius: 5px;
     transition: 0.5s;
     margin: 20px;
+    margin-left: -10vh;
 }
 .v1{
     width: 100%;
@@ -129,13 +134,13 @@ axios.get( api )
 
 .div1:hover .div3{
     opacity: 10;
-    transition: 1.2s !important;
-    transform: translateY(-55px) !important;
-    transform-origin:bottom top; 
+    transition: 1.5s !important;
+    transform: translateY(5vh) !important;
+    transform-origin:top bottom; 
 }
 .div1:hover .text-black{
     transition: 4s;
-    display: none;
+opacity: 10;
 }
 
 .p3 {

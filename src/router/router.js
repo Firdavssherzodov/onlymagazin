@@ -2,8 +2,9 @@ import { createRouter,createWebHistory } from 'vue-router'
 import malumot from '../page/malumot.vue'
 import home from '../components/Home.vue'
 import admin from '../components/admin.vue'
-import like from '../page/like.vue'
+import like from '../Page/like.vue'
 import savat from '../components/savat/savat.vue'
+ import update from '../Page/Update.vue'
 const route = [
     {
         path:'/',
@@ -11,7 +12,7 @@ const route = [
         component:home,
     },
     {
-        path:'/malumot/:id',
+        path:'/malumot',
         component:malumot,
         name:'malumot',
     
@@ -28,9 +29,14 @@ const route = [
         name:'like',
     },
     {
-        path:'/savat1',
+        path:'/savat',
         component:savat,
-        name:savat
+        name:'savat'
+    },
+    {
+        path:'/update',
+        component:update,
+        name:'update'
     }
   
 
