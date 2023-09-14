@@ -64,7 +64,6 @@ let title = ref('')
 let description = ref('')
 let image = ref('')
 const id = ref(null)
-
 const qabul = ref([])
 // axios.get
 const Kiruvchi = async () => {
