@@ -112,8 +112,6 @@
   border-radius: 2rem !important;
   background-color: aliceblue;
 }
-.Menu div {
-  background-color: aliceblue;
 
   padding: 2.5vh 4vh;
   height: 100%;
