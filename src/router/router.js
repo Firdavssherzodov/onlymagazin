@@ -1,7 +1,7 @@
 import { createRouter,createWebHistory } from 'vue-router'
 import malumot from '../page/malumot.vue'
 import home from '../components/Home.vue'
-import like from '../Page/like.vue'
+import like1 from '../Page/like.vue'
 import savat from '../components/savat/savat.vue'
  import update from '../Page/Update.vue'
 const route = [
@@ -18,7 +18,7 @@ const route = [
     },
     {
         path:'/like',
-        component:like,
+        component:like1,
         name:'like',
     },
     {
