@@ -34,9 +34,9 @@
   <div class="diva">
 
 
-    <div class="card shadow" v-for="srt in qabul" :key="srt">
+    <div class="card shadow" v-for="(srt,index) in qabul" :key="index">
       <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-        <img :src="srt.image" class="img-fluid" />
+        <img :src="srt.image" class="img-fluid"/>
         <a href="#!">
           <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
         </a>
@@ -44,11 +44,17 @@
       <div class="card-body">
         <h5 class="card-title">{{ srt.title }}</h5>
         <p class="card-text">{{ srt.description }}.</p>
-        <button class="btn blt btn-danger ml-5 rounded-9 fs-5 ml-12" @click="deleteTravel(travel._id)">  <i class="fas fa-trash-can"></i></button>
+        {{ srt._id }}
+        
+        
+
+
+        <button class="btn blt btn-danger ml-5 rounded-9 fs-5 ml-12" @click="deleteTravel(srt._id,index)" >  <i class="fas fa-trash-can"></i></button>
         <button class="btn btn-warning ml-5 fs-5 rounded-9 ml-12" type="submit" @click="getData(srt._id)"  ><i class="fas fa-pen "></i></button>
-   
+     
       </div>
     </div>
+   <h1 ref="firdavs">5</h1>
   </div>
 </template>
   
@@ -62,10 +68,15 @@ import axios from 'axios'
 
 let title = ref('')
 let description = ref('')
-let image = ref('')
+let image =   ref(' ')
 const id = ref(null)
 
+
 const qabul = ref([])
+
+let firdavs = ref()
+
+
 
 
 // axios.get
@@ -78,12 +89,14 @@ const Kiruvchi = async () => {
 Kiruvchi()
 
 
-// const deleteTravel = async (idw) => {
-//     await axios.delete(`https://yangi-travel.onrender.com/${idw}`)
+const deleteTravel = async (idw,index) => {
 
-//     qabul.value = []
-//     Kiruvchi()
-//  }
+     qabul.value.splice(index,1)
+
+    await axios.delete(`https://yangi-travel.onrender.com/${idw}`)
+    id.value = idw  
+    qabul.value = []
+ }
 
 // axios.post
 const Addsubmit = async () => {
@@ -92,7 +105,7 @@ const Addsubmit = async () => {
     description: description.value,
     image: image.value
   })
-  title.value = ' ',
+    title.value = ' ',
     description.value = ' ',
     image.value = ''
 
@@ -117,6 +130,9 @@ let getData = async (idx) => {
   let button2 = document.querySelector('.tugma')
   button2.removeAttribute('disabled',true)
 }
+
+
+
 let updataData = async () => {
 
   await axios.put(`https://yangi-travel.onrender.com/${id.value}`, {
@@ -143,7 +159,7 @@ onMounted(() => {
 })
 
 
- 
+
 function Replace(){
   let button1 = document.querySelector('.buttom')
   button1.removeAttribute('disabled',true)
@@ -255,4 +271,5 @@ input {
   margin-top: -79.5vh;
   display: flex;
   flex-wrap: wrap;
-}</style>
+}
+</style>

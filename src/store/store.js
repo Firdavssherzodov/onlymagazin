@@ -1,7 +1,7 @@
 import { ref } from "vue";
 
 
- const localData =  JSON.parse(localStorage.getItem('product')) || []
+ const localData =  JSON.parse(localStorage.getItem('')) || []
 
 const storage = ref(localData)
 

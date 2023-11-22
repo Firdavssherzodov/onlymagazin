@@ -111,8 +111,8 @@ axios.get( api )
 }
 .div1 img {
     position: absolute;
-    width: 250px;
-    height: 240px;
+    width: 200px;
+    height: 200px;
     border-radius: 5px;
     transition: 0.5s;
     margin: 20px;

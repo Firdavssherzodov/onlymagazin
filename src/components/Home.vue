@@ -1,6 +1,6 @@
 <template>
     <div>
-<nav1></nav1>
+<Header1/>
 <Search/>
 <carusel/>
 <sotuv/>
@@ -8,7 +8,7 @@
 </template>
 
 <script setup>
-import nav1 from './Header.vue'
+import Header1 from './Header.vue'
 import Search from "./Search.vue"
 import carusel from './carusel.vue';
 import sotuv from './sotuv.vue';
