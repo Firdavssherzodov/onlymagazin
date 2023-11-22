@@ -17,11 +17,6 @@ const route = [
     
     },
     {
-        path:'/like',
-        component:like1,
-        name:'like',
-    },
-    {
         path:'/savat',
         component:savat,
         name:'savat'
