@@ -44,7 +44,7 @@
       <div class="card-body">
         <h5 class="card-title">{{ srt.title }}</h5>
         <p class="card-text">{{ srt.description }}.</p>
-        <a href="#!" class="btn btn-danger ml-5 rounded-9 fs-5 ml-12">  <i class="fas fa-trash-can"></i></a>
+        <button class="btn blt btn-danger ml-5 rounded-9 fs-5 ml-12" @click="deleteTravel(travel._id)">  <i class="fas fa-trash-can"></i></button>
         <button class="btn btn-warning ml-5 fs-5 rounded-9 ml-12" type="submit" @click="getData(srt._id)"  ><i class="fas fa-pen "></i></button>
    
       </div>
@@ -64,7 +64,10 @@ let title = ref('')
 let description = ref('')
 let image = ref('')
 const id = ref(null)
+
 const qabul = ref([])
+
+
 // axios.get
 const Kiruvchi = async () => {
   let response = await axios.get('https://yangi-travel.onrender.com/')
@@ -72,8 +75,15 @@ const Kiruvchi = async () => {
 
 }
 
-
 Kiruvchi()
+
+
+// const deleteTravel = async (idw) => {
+//     await axios.delete(`https://yangi-travel.onrender.com/${idw}`)
+
+//     qabul.value = []
+//     Kiruvchi()
+//  }
 
 // axios.post
 const Addsubmit = async () => {
@@ -81,7 +91,6 @@ const Addsubmit = async () => {
     title: title.value,
     description: description.value,
     image: image.value
-
   })
   title.value = ' ',
     description.value = ' ',
@@ -159,7 +168,6 @@ color: rgb(66, 63, 63);
 }
 .fa-trash-can:hover{
   color: #fff;
-  
 }
 
 
