@@ -1,8 +1,8 @@
 <template>
-    <div class="kattadiv row mt-5">
+    <div class="diva">
     
       
-     
+  
 
             
  

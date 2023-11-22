@@ -33,41 +33,29 @@
     </div>
   </header>
 
-  <section class="Menu">
+  <section class="Menu d-none">
+    <div>
+      <a href="#" class="fa-solid fa-house fs-4" style="color: #8c8989"></a>
+    </div>
     <div>
       <a
         href="#"
-        class="fa-solid fa-house fs-4 text-primary"
+        class="fa-solid fa-magnifying-glass fs-4"
         style="color: #8c8989"
       ></a>
     </div>
     <div>
       <a
         href="#"
-        class="fa-solid fa-magnifying-glass fs-4 text-info"
+        class="fa-solid fa-bag-shopping fs-4"
         style="color: #8c8989"
       ></a>
     </div>
     <div>
-      <a
-        href="#"
-        class="fa-solid fa-bag-shopping fs-4 text-primary"
-        style="color: #8c8989"
-      ></a>
+      <a href="#" class="fa-regular fa-heart fs-4" style="color: #8c8989"></a>
     </div>
     <div>
-      <a
-        href="#"
-        class="fa-regular fa-heart fs-4 text-danger"
-        style="color: #8c8989"
-      ></a>
-    </div>
-    <div>
-      <a
-        href="#"
-        class="fa-regular fa-user fs-4 text-dark"
-        style="color: #8c8989"
-      ></a>
+      <a href="#" class="fa-regular fa-user fs-4" style="color: #8c8989"></a>
     </div>
   </section>
 </template>
@@ -101,7 +89,7 @@
 }
 .Menu {
   width: 350px;
-  height: 60px;
+  height: 70px;
   position: fixed;
   left: 40.5%;
   z-index: 22;
@@ -109,23 +97,41 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-radius: 2rem !important;
+  border-radius: 10px !important;
   background-color: aliceblue;
 }
 
-  padding: 2.5vh 4vh;
-  height: 100%;
-  box-shadow: 0px 0px 4px grey;
-}
-/* Responsive */
+
+/* Responsive 385px*/
 @media (max-width: 385px) {
   .diva {
     display: none;
   }
   .Menu {
-    width: 90%;
-    left: 4%;
-    bottom: 2% !important;
+    display: block;
+    width: 100%;
+    height: 60px !important;
+    left: 8% !important;
+    bottom: 1% !important;
+  }
+  .Menu,a{
+    font-size: 1.1rem !important;
+  }
+}
+/* Responsive  576px*/
+@media (max-width: 576px) {
+  .diva {
+    display: none;
+  }
+  .Menu {   
+    display: inline-flex !important;
+    width: 85%;
+    height: 60px !important;
+    left: 8%;
+    bottom: 1% !important;
+  }
+  .Menu,a{
+    font-size: 1.4rem;
   }
 }
 </style>

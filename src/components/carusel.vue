@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="diva">
         <div id="carouselExampleIndicators" class=" carousel slide " data-mdb-ride="carousel" >
             <div class="carousel-indicators">
                 <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="0" class="active"
@@ -51,6 +51,27 @@
     width: 90% ;
     margin: auto;
     border-radius:10px ;
-     
+}
+/* Responsive 385px*/
+@media (max-width: 385px) {
+    .diva{
+    width: 100%;
+    height: 28vh !important;
+} 
+
+.diva button{
+    margin-top: 12vh;
+}
+}
+/* Responsive 576px */
+@media (max-width: 576px) {
+    .diva{
+    width: 100%;
+    height: 33vh; 
+} 
+
+.diva button{
+    margin-top: 12vh;
+}
 }
 </style>

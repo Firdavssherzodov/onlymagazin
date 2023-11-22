@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="diva">
     <section class="border p-4 mb-4 d-flex align-items-center flex-column">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -99,7 +99,21 @@
   padding-block: 0.7em;
   border: none;
 }
-
+/* styling of animated border */
+.form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+/* Hover on Input */
 .form:focus-within {
   border-radius: var(--after-border-radius);
 }
@@ -113,23 +127,15 @@ input:focus {
 }
 /* styling of close button */
 /* == you can click the close button to remove text == */
-.reset {
-  border: none;
-  background: none;
-  opacity: 0;
-  visibility: hidden;
-}
-/* close button shown when typing */
-input:not(:placeholder-shown) ~ .reset {
-  opacity: 1;
-  visibility: visible;
-}
-/* sizing svg icons */
-.form svg {
-  width: 17px;
-  margin-top: 3px;
-}
-.btn-outline-secondary {
-  margin-left: 137em;
+@media (max-width: 380px) {
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .diva{
+    width: 100% !important;
+  }
+
 }
 </style>
